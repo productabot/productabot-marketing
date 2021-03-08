@@ -1,0 +1,49 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #000000;
+	color: #ffffff;
+	margin: 0;
+	padding: 25px;
+	box-sizing: border-box;
+	font-family: Arial;
+	overflow-y: scroll;
+}
+
+block {
+	display: block;
+	margin-bottom: 30px;
+}
+
+.active {
+	text-decoration: underline !important;
+}
+
+a, NavLink, a:hover, a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.only-mobile {
+	display: none;
+}
+
+@media (max-width: 640px) {
+	.image {
+		width: 100%;
+	}
+	.not-mobile {
+		display: none !important;
+	}
+	.only-mobile {
+		display: unset;
+	}
+}
