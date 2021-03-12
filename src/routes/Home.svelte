@@ -43,12 +43,12 @@
             carousel.resume();
         }, 3000);
     }
-    function enter() {
-        carousel.pause();
-    }
-    function leave() {
-        carousel.resume();
-    }
+    // function enter() {
+    //     carousel.pause();
+    // }
+    // function leave() {
+    //     carousel.resume();
+    // }
 </script>
 
 <div>
@@ -57,7 +57,8 @@
             >with productabot</span
         >
     </p>
-    <div in:fade={delays[2]} on:mouseenter={enter} on:mouseleave={leave}>
+    <div in:fade={delays[2]}>
+        <!-- {on:mouseenter={enter} on:mouseleave={leave}} -->
         <Carousel
             bind:this={carousel}
             autoplay={5000}

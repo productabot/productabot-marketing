@@ -5,6 +5,8 @@
 	import NavLink from "./components/NavLink.svelte";
 	import Home from "./routes/Home.svelte";
 	import Faq from "./routes/Faq.svelte";
+	import Confirm from "./routes/Confirm.svelte";
+	import Reset from "./routes/Reset.svelte";
 </script>
 
 <Router>
@@ -33,6 +35,18 @@
 				|
 				<a
 					class="link not-mobile"
+					target="_blank"
+					href="https://app.productabot.com/login?demo=true">demo</a
+				>
+				<a
+					class="link only-mobile"
+					target="_blank"
+					href="javascript:alert(`In order to demo, make sure you've installed the app first`);window.open(`productabot://demo`)"
+					>demo</a
+				>
+				|
+				<a
+					class="link not-mobile"
 					style="background-color:#3F0054;padding:5px 10px;"
 					href="https://app.productabot.com/login">login</a
 				>
@@ -45,12 +59,14 @@
 					class="link only-mobile"
 					style="background-color:#3F91A1;padding:5px 10px;"
 					href="javascript:alert(`Sorry, this app isn't available for mobile devices yet. Visit this page on desktop instead!`)"
-					>download the app</a
+					>download app</a
 				>
 			</nav>
 		</logo>
 		<Route path="/" component={Home} />
 		<Route path="faq" component={Faq} />
+		<Route path="confirm" component={Confirm} />
+		<Route path="reset" component={Reset} />
 	</main>
 	<footer>© {new Date().getFullYear()} productabot</footer>
 </Router>
