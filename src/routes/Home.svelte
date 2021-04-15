@@ -51,15 +51,18 @@
     // }
 </script>
 
-<div>
+<div
+    style="display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:10px;"
+>
     <p in:fade={delays[0]}>
         get your personal projects off of the ground <span in:fade={delays[1]}
             >with productabot</span
         >
     </p>
-    <div in:fade={delays[2]}>
+    <div style="max-width:925px;margin:10px;width:100%;" in:fade={delays[2]}>
         <!-- {on:mouseenter={enter} on:mouseleave={leave}} -->
         <Carousel
+            style="width:100px;"
             bind:this={carousel}
             autoplay={5000}
             duration={400}
@@ -67,7 +70,7 @@
             easing="ease"
         >
             <!-- <span class="control" slot="left-control" style="color:#ffffff">←</span> -->
-            <div class="slide-content">
+            <div class="slide-content" style="background-color:#000000;height:300px;">
                 <p in:fade={delays[2]}>
                     <header1>create projects</header1> to give each idea a tangible
                     home
@@ -106,7 +109,12 @@
                         alexandria & chris
                     </project>
                     <project class="not-mobile" in:fade={delays[6]}>
-                        <projectAdd>+</projectAdd>
+                        <img
+                            alt=""
+                            src="https://files.productabot.com/test/productabot.png"
+                            class="projectSquare"
+                        />
+                        productabot
                     </project>
                 </projects>
             </div>
@@ -173,6 +181,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        margin-top: 40px;
     }
     project {
         display: flex;
@@ -180,9 +189,9 @@
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        margin-right: 40px;
+        margin-right: 75px;
         cursor: pointer;
-        margin-top: 30px;
+        margin-top: 50px;
     }
     .projectSquare {
         width: 120px;
@@ -190,13 +199,8 @@
         border: 1px solid #ffffff;
         margin-bottom: 5px;
     }
-    projectAdd {
-        width: 120px;
-        height: 120px;
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .slide-content {
+        text-align: center;
     }
     @media (max-width: 640px) {
         project {

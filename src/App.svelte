@@ -41,8 +41,13 @@
 				<a
 					class="link only-mobile"
 					target="_blank"
-					href="javascript:alert(`In order to demo, make sure you've installed the app first`);window.open(`productabot://demo`)"
-					>demo</a
+					on:click={() => {
+						alert(
+							`In order to demo, make sure you've installed the app first`
+						);
+						window.open(`productabot://demo`);
+					}}
+					href="/#">demo</a
 				>
 				|
 				<a
@@ -58,8 +63,12 @@
 				<a
 					class="link only-mobile"
 					style="background-color:#3F91A1;padding:5px 10px;"
-					href="javascript:alert(`Sorry, this app isn't available for mobile devices yet. Visit this page on desktop instead!`)"
-					>download app</a
+					on:click={() => {
+						alert(
+							`Sorry, this app isn't available for mobile devices yet. Visit this page on desktop instead!`
+						);
+					}}
+					href="/#">download app</a
 				>
 			</nav>
 		</logo>
@@ -74,7 +83,7 @@
 <style>
 	main {
 		margin: auto;
-		max-width: 800px;
+		max-width: 1180px;
 		min-height: calc(100vh - 100px);
 	}
 	logo {
